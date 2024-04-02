@@ -28,7 +28,7 @@ mutation create {
 
 ```
 
-Copy the ID and query the author:
+Copy the author ID and query the author:
 
 ```graphql
 {
@@ -39,10 +39,13 @@ Copy the ID and query the author:
 }
 ```
 
+This also tries to load the book from the author, but it will fail.
 You'll get the error:
 
 ```bash
 TypeError: Cannot read properties of undefined (reading 'load')
 ```
+
+However we can load the book from the BookRepository, and we can do book.author.load() without any issues.
 
 ![alt text](image.png)
