@@ -16,10 +16,10 @@ I expect it to return null if the author does not have a book.
 
 1. Run `pnpm start:dev` in the root
 2. Access the GraphQL playground at http://localhost:3000/graphql
-3. Create an author in the GraphQL playground:
+3. Create an author and book in the GraphQL playground:
 
 ```graphql
-mutation createAuthor {
+mutation create {
   createAuthor {
     id
     name
