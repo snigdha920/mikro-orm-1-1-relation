@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  mongo:
+    image: mongo:6.0
+    expose:
+      - 27017
+    ports:
+      - '27017:27017'
+    restart: always
+
+  postgre:
+    image: postgres:16.2
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgre:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
